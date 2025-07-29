@@ -1,0 +1,215 @@
+/* ===================== */
+/* Estilos generales      */
+/* ===================== */
+* {
+  box-sizing: border-box;
+}
+
+body,html,#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+.plantillaBase {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* ===================== */
+/* Header                 */
+/* ===================== */
+.encabezado {
+  height: 56px;
+  background-color: var(--color-superficie);
+  border-bottom: 1px solid var(--color-borde);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;/*Empuja los elementos a los extremos*/
+  padding: 0 1rem;
+  box-shadow: var(--sombra);
+  user-select: none;
+}
+
+.menuIzquierda {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.botonMenu {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-negro);
+  padding: 0;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.botonMenu:hover {
+  color: var(--gris-medio);
+}
+
+.usuarioDerecha {
+  font-weight: 600;
+  color: var(--color-negro);
+  white-space: nowrap;
+}
+
+/* ===================== */
+/* Menú lateral (barra)   */
+/* ===================== */
+.barraLateral {
+  background-color: var(--menu-bg);
+  border-right: 1px solid var(--color-borde);
+  box-shadow: var(--sombra);
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease;
+  width: 240px;
+  min-width: 60px;
+
+}
+
+.menu-cerrado .barraLateral {
+  width: 60px;
+}
+
+/* Área logo y título */
+.areaLogo {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  gap: 0.75rem;
+  white-space: nowrap;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+}
+
+.tituloEmpresa {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: var(--menu-hover);
+  word-break: break-all;
+  max-width: 100%;
+}
+
+/* Menú navegación */
+.menuNavegacion {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+  gap: 0.5rem;
+  /*overflow-y: auto;*/
+}
+
+.itemNavegacion {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.7rem 1rem;
+  color: var(--menu-hover);
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--menu-hover);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 
+    background-color 0.3s ease, 
+    color 0.3s ease;
+}
+
+.itemNavegacion:hover,
+.itemNavegacion.activo {
+  background-color: var(--menu-hover);
+  color:var(--menu-bg);
+}
+
+.iconoRuta {
+  height: 24px;
+  width: 24px;
+  flex-shrink: 0;
+  filter: brightness(0) invert(1); /* Iconos en blanco */
+
+}
+.itemNavegacion:hover .iconoRuta,
+.itemNavegacion.activo .iconoRuta {
+  filter: brightness(0) invert(0); /* negro */
+}
+
+/* Cerrar sesión */
+.usuarioCerrarSesion {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* espacio entre usuario y cerrar sesión */
+  cursor: pointer;
+}
+
+.cerrarSesion {
+  margin-top: 0;
+  padding: 0.7rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--color-error);
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.cerrarSesion:hover {
+  background-color: var(--color-error-bg);
+}
+
+.iconoCerrar {
+  height: 24px;
+  width: 24px;
+  flex-shrink: 0;
+  /*varia el color a rojo*/
+  filter: invert(38%) sepia(61%) saturate(7459%) hue-rotate(349deg) brightness(92%) contrast(88%);
+}
+
+/* ===================== */
+/* Contenido principal    */
+/* ===================== */
+.contenidoPrincipal {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-fondo);
+  /*overflow: hidden;*/
+}
+
+.contenido {
+  flex-grow: 1;
+  overflow: auto;
+  padding: 1rem;
+}
+/* ===================== */
+/* Footer (Pie de página) */
+/* ===================== */
+.piePagina {
+  height: 40px;
+  background-color: var(--color-superficie);
+  border-top: 1px solid var(--color-borde);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: var(--color-texto);
+  user-select: none;
+}
+

@@ -1,0 +1,67 @@
+@import "tailwindcss";
+@font-face {
+  font-family: 'NunitoSans';/* Nombre de la fuente */
+  src: url('./Fonts/Nunito-VariableFont_wght.ttf') format('truetype');/* Fuente variable de Nunito Sans */
+  font-weight: 100 1000; /* Variable weight support */
+  font-style: normal; /* Indica que el estilo normal */
+  font-display: swap; /* Mejora la carga de fuentes */
+}
+
+body {
+  font-family: 'NunitoSans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* archivo: variables.css */
+
+:root {
+  /* Verdes suaves a intensos */
+  --verde-claro-1: #d9ed92;
+  --verde-claro-2: #b5e48c;
+  --verde-medio: #99d98c;
+  --verde-profundo: #66e993;
+
+  /* Turquesa - transición */
+  --turquesa: #52b69a;
+
+  /* Azules elegantes */
+  --azul-suave: #3badb1fb;
+  --azul-medio: #168aad;
+  --azul-intenso: #1a759f;
+  --azul-oscuro: #1e6091;
+  --azul-profundo: #184e77;
+
+  /* Menu */
+  --menu-bg:#293033;
+  --menu-hover:#ffffff;
+
+  /* Grises y neutros */
+  --gris-claro: #f8f9fa; /* Gris muy claro neutro */
+  --gris-medio: #ced4da; /* Gris medio neutro */
+  --color-negro: black;
+
+  /* Aplicación de tonos */
+  --color-primario: #293033;     
+  --color-primario-hover: #2930339c;
+  --color-fondo: #f8f9fa;                      /* gris muy claro neutro */
+  --color-superficie: #ffffff;
+  --color-borde: #d1d5db;                      /* gris claro neutro */
+  --color-titulo: var(--azul-profundo);       /* #184e77 */
+  --color-texto: #1f2937;                      /* gris oscuro elegante */
+
+  /* Estados */
+  --color-exito: #16A34A;            /* Verde fuerte */
+  --color-exito-bg: #DCFCE7;
+  --color-exito-borde: #86EFAC;
+
+  --color-error: #dc2626;
+  --color-error-bg: #fee2e2;
+  --color-error-borde: #fecaca;
+
+  --color-advertencia: #f59e0b;
+  --color-advertencia-bg: #fef3c7;
+
+  /* Otros */
+  --sombra: 0 2px 8px rgba(0, 0, 0, 0.06);
+}

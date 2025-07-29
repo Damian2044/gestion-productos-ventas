@@ -1,0 +1,46 @@
+build/
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+.venv/
+env/
+venv/
+.mypy_cache/
+.pytest_cache/
+*.sqlite3
+*.log
+
+# Node
+node_modules/
+build/
+dist/
+.next/
+.nuxt/
+yarn-error.log
+npm-debug.log
+pnpm-debug.log
+
+# Docker
+*.pid
+*.pid.lock
+docker-compose.override.yml
+.docker/
+
+# Sistema
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+venv_nuevo
+# IDEs y editores
+.vscode/
+.idea/
+.history/
+.swp
+.swo
+.bak
+.tmp

@@ -1,0 +1,104 @@
+:root {
+  --color-negro-claro: #2e2e2e;
+  --color-blanco: #ffffff;
+  --color-fondo-menu: #1f2937; /* gris azulado oscuro */
+  --color-fondo-hover: #374151; /* gris azulado más claro */
+  --color-texto: var(--color-blanco);
+  --radio-borde: 12px;
+  --padding-ruta: 12px 20px;
+  --gap-icono-texto: 12px;
+  --tamano-icono: 20px;
+  --fuente-base: 'NunitoSans', sans-serif;
+}
+
+.botonMenu {
+  background-color: var(--color-negro-claro);
+  color: var(--color-blanco);
+  border: none;
+  padding: 10px 18px;
+  border-radius: var(--radio-borde);
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-family: var(--fuente-base);
+  transition: background-color 0.3s ease;
+}
+
+.botonMenu:hover {
+  background-color: var(--color-fondo-hover);
+}
+
+.menuLateral {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 280px;
+  height: 100vh;
+  background-color: var(--color-fondo-menu);
+  box-shadow: 4px 0 12px rgba(0,0,0,0.3);
+  padding: 20px;
+  box-sizing: border-box;
+  transition: left 0.3s ease;
+  z-index: 9999;
+  overflow-y: auto;
+}
+
+.menuLateral.activo {
+  left: 0;
+}
+
+.botonCerrar {
+  background: none;
+  border: none;
+  color: var(--color-blanco);
+  font-size: 2rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-family: var(--fuente-base);
+  align-self: flex-end;
+  transition: transform 0.3s ease;
+}
+
+.botonCerrar:hover {
+  transform: scale(1.2);
+}
+
+.listaRutas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listaRutas li {
+  margin-bottom: 8px;
+}
+
+.botonRuta {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-icono-texto);
+  padding: var(--padding-ruta);
+  border-radius: var(--radio-borde) 0 0 var(--radio-borde);
+  color: var(--color-texto);
+  font-family: var(--fuente-base);
+  font-size: 1rem;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.botonRuta:hover {
+  background-color: var(--color-blanco);
+  color: var(--color-negro-claro);
+}
+
+.iconoOpcion {
+  width: var(--tamano-icono);
+  height: var(--tamano-icono);
+  object-fit: contain;
+  user-select: none;
+}
+
+.textoRuta {
+  flex: 1;
+}
